@@ -7,7 +7,6 @@
     android:background="#E5E5E5"
     tools:context=".MainActivity">
 
-    <!-- ========= THANH HEADER =========== -->
     <LinearLayout
         android:id="@+id/headerBar"
         android:layout_width="0dp"
@@ -33,7 +32,6 @@
 
     </LinearLayout>
 
-    <!-- ========= AVATAR + THÔNG TIN =========== -->
     <LinearLayout
         android:id="@+id/userInfo"
         android:layout_width="0dp"
@@ -87,7 +85,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- ========= CÁC NÚT CHỨC NĂNG =========== -->
 
     <LinearLayout
         android:id="@+id/menuSection"
@@ -197,7 +194,6 @@
 
     </LinearLayout>
 
-    <!-- ========= UPDATE + PRIVACY BUTTONS =========== -->
     <LinearLayout
         android:id="@+id/footerBtns"
         android:layout_width="0dp"
@@ -208,7 +204,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Update info -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="55dp"
