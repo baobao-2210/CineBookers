@@ -173,5 +173,4 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(intent);
         finish(); // kết thúc RegisterActivity để không bị quay lại
     }
-
 }
