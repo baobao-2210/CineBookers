@@ -26,6 +26,8 @@
         <activity android:name=".ChatActivity" />
         <activity android:name=".ChatDetailActivity" />
         <activity android:name=".NotificationActivity" />
+        <activity android:name=".ThuVienActivity" />
+
     </application>
 
 </manifest>
