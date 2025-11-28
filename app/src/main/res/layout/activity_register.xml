@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="#5865F2"
     android:fillViewport="true"
+    android:focusableInTouchMode="true"
     android:id="@+id/main">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -67,8 +68,8 @@
             app:layout_constraintBottom_toBottomOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="522dp"
+                android:layout_width="355dp"
+                android:layout_height="544dp"
                 android:padding="20dp">
 
                 <!-- Toggle Sinh viên / Giảng viên -->

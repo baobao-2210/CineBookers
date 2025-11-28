@@ -110,7 +110,7 @@ public class ChatFragment extends Fragment {
                 "Nhóm Học Tập OOAD01",
                 "Mọi người đã về usecase chưa",
                 "10:30",
-                "#",
+                "OOA",
                 true
         ));
 
@@ -126,12 +126,12 @@ public class ChatFragment extends Fragment {
                 "Nhóm Lập Trình Di Động",
                 "Ai đã làm xong bài tập chưa?",
                 "Hôm qua",
-                "#",
+                "NT",
                 true
         ));
 
         chatList.add(new ChatItem(
-                "TS. Hoàng Thị Mỹ Lệ",
+                "ThS. Đỗ Phú Huy",
                 "Lớp học tuần sau nghỉ nhé các em",
                 "Hôm qua",
                 "ML",
@@ -142,7 +142,7 @@ public class ChatFragment extends Fragment {
                 "Nhóm Cơ Sở Dữ Liệu",
                 "Meeting lúc 2h chiều nha mọi người",
                 "T2",
-                "#",
+                "N",
                 true
         ));
 

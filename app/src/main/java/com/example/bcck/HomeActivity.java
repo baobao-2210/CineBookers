@@ -29,9 +29,14 @@ public class HomeActivity extends AppCompatActivity {
         // Setup click listeners cho Bottom Navigation
         setupBottomNavigation();
 
-        // Load fragment đầu tiên (Trang Chủ)
+        // **CHỈNH SỬA TẠI ĐÂY:**
         if (savedInstanceState == null) {
+            // 1. Gọi hàm loadFragment để thực hiện Fragment Transaction
             loadFragment(new HomeFragment(), 0);
+
+            // 2. CẬP NHẬT GIAO DIỆN Bottom Nav (QUAN TRỌNG)
+            // Lệnh này đảm bảo icon Trang Chủ được tô sáng ngay từ đầu
+            updateBottomNav(0);
         }
     }
 
@@ -91,24 +96,20 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void loadFragment(Fragment fragment, int index) {
-        // Kiểm tra nếu đang ở fragment này rồi thì không load lại
-        if (currentFragmentIndex == index) {
+
+        // Nếu fragment chưa từng được thêm, vẫn cho phép load
+        if (currentFragmentIndex == index &&
+                getSupportFragmentManager().findFragmentById(R.id.fragmentContainer) != null) {
             return;
         }
 
         currentFragmentIndex = index;
 
-        // Thay thế fragment trong FrameLayout
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-
-        // Thêm animation chuyển fragment (tùy chọn)
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.setCustomAnimations(
                 android.R.anim.fade_in,
                 android.R.anim.fade_out
         );
-
-        // Replace fragment
         transaction.replace(R.id.fragmentContainer, fragment);
         transaction.commit();
     }

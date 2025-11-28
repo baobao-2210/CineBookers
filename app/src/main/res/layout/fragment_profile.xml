@@ -17,7 +17,7 @@
             android:id="@+id/headerLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#5B5FC7"
+            android:background="#171DAF"
             android:padding="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +59,7 @@
                 android:layout_height="37dp"
                 android:background="@android:color/black"
                 android:padding="8dp"
-                android:src="@android:drawable/ic_menu_manage"
+                android:src="@drawable/icon_person"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -95,12 +95,12 @@
                     android:id="@+id/avatarCard"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:backgroundTint="#5B5FC7"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
-                    android:backgroundTint="#5B5FC7"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -112,40 +112,40 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:src="@android:drawable/ic_menu_myplaces"
-                            app:tint="@android:color/white"
-                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent" />
+                            app:tint="@android:color/white" />
 
                         <!-- Camera Icon -->
                         <ImageView
                             android:id="@+id/btnEditAvatar"
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:src="@android:drawable/ic_menu_camera"
                             android:background="@android:color/white"
                             android:padding="6dp"
-                            app:tint="#5B5FC7"
+                            android:src="@android:drawable/ic_menu_camera"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent" />
+                            app:tint="#5B5FC7" />
 
                         <!-- Username Badge -->
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="JINKER"
-                            android:textSize="12sp"
-                            android:textColor="@android:color/white"
-                            android:textStyle="bold"
                             android:background="#3F51B5"
                             android:paddingStart="8dp"
-                            android:paddingEnd="8dp"
                             android:paddingTop="2dp"
+                            android:paddingEnd="8dp"
                             android:paddingBottom="2dp"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="JINKER"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent" />
+                            app:layout_constraintStart_toStartOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -154,24 +154,24 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintStart_toEndOf="@id/avatarCard"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintStart_toEndOf="@id/avatarCard"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <!-- Họ và tên -->
                     <TextView
                         android:id="@+id/tvName"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Họ và tên : Nguyễn Văn B"
-                        android:textSize="14sp"
-                        android:textColor="#000080"
-                        android:textStyle="bold"
                         android:background="@android:color/white"
                         android:padding="8dp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Họ và tên : Nguyễn Tấn Bảo"
+                        android:textColor="#000080"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <!-- Lớp -->
@@ -179,15 +179,15 @@
                         android:id="@+id/tvClass"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Lớp :      "
-                        android:textSize="14sp"
-                        android:textColor="#000080"
-                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"
                         android:background="@android:color/white"
                         android:padding="8dp"
-                        android:layout_marginTop="4dp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Lớp :      "
+                        android:textColor="#000080"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvName" />
 
                     <!-- Khoa -->
@@ -195,15 +195,15 @@
                         android:id="@+id/tvDepartment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Khoa : "
-                        android:textSize="14sp"
-                        android:textColor="#000080"
-                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"
                         android:background="@android:color/white"
                         android:padding="8dp"
-                        android:layout_marginTop="4dp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Khoa : "
+                        android:textColor="#000080"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvClass" />
 
                     <!-- Khóa -->
@@ -211,15 +211,15 @@
                         android:id="@+id/tvYear"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Khóa : 2023"
-                        android:textSize="14sp"
-                        android:textColor="#000080"
-                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"
                         android:background="@android:color/white"
                         android:padding="8dp"
-                        android:layout_marginTop="4dp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Khóa : 2023"
+                        android:textColor="#000080"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvDepartment" />
 
                     <!-- Email -->
@@ -227,15 +227,15 @@
                         android:id="@+id/tvEmail"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Email : XXXXX@gmail.com"
-                        android:textSize="14sp"
-                        android:textColor="#000080"
-                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"
                         android:background="@android:color/white"
                         android:padding="8dp"
-                        android:layout_marginTop="4dp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Email : XXXXX@gmail.com"
+                        android:textColor="#000080"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvYear" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

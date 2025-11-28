@@ -162,6 +162,6 @@ public class GroupFragment extends Fragment {
         }
 
         groupAdapter.notifyDataSetChanged();
-        ///
+
     }
 }

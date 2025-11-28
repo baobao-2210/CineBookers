@@ -11,7 +11,7 @@
         android:id="@+id/headerLayout"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:background="#5B5FC7"
+        android:background="#0C14E9"
         android:padding="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
