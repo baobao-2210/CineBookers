@@ -29,7 +29,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center"
-                android:src="@android:drawable/ic_menu_myplaces"
+                android:src="@drawable/ic_dropbox"
                 app:tint="@android:color/white" />
         </androidx.cardview.widget.CardView>
 

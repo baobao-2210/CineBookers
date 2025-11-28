@@ -1,10 +1,12 @@
 package com.example.bcck;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,7 +32,15 @@ public class HomeFragment extends Fragment {
         // Khởi tạo views
         initViews(view);
 
-        // Setup click listeners
+        // Gắn sự kiện cho nút chuông
+        ImageView iconNoti = view.findViewById(R.id.iconNotification);
+
+        iconNoti.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), NotificationActivity.class);
+            startActivity(intent);
+        });
+
+        // Các hàm setup có sẵn
         setupCloudStorageCards();
         setupFilterButtons();
         setupPdfItems();
@@ -156,4 +166,5 @@ public class HomeFragment extends Fragment {
                         "Downloads: " + downloads + " | Likes: " + likes + " | Rating: " + rating,
                 Toast.LENGTH_LONG).show();
     }
+
 }

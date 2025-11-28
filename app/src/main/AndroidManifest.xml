@@ -23,6 +23,8 @@
         <activity android:name=".HomeActivity"  >
         </activity>
         <activity android:name=".ChatActivity" />
+        <activity android:name=".ChatDetailActivity" />
+        <activity android:name=".NotificationActivity" />
     </application>
 
 </manifest>
