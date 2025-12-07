@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E8E8FF">
@@ -22,7 +23,7 @@
             android:id="@+id/logoIcon"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ute"
+            android:src="@drawable/ute1"
             android:contentDescription="Logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -31,15 +32,15 @@
         <!-- Icon Bell (Thông báo) -->
         <ImageView
             android:id="@+id/iconNotification"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="20dp"
+            android:layout_height="19dp"
             android:layout_marginEnd="16dp"
-            android:src="@android:drawable/ic_popup_reminder"
             android:contentDescription="Notification"
-            app:tint="@android:color/white"
+            android:src="@android:drawable/ic_popup_reminder"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/iconProfile"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:tint="@android:color/white" />
 
         <!-- Icon Profile -->
         <ImageView

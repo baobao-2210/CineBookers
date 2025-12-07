@@ -6,8 +6,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.bcck.Chat.ChatFragment;
+import com.example.bcck.Home.HomeFragment;
+import com.example.bcck.Profile.ProfileFragment;
+import com.example.bcck.group.GroupFragment;
+import com.example.bcck.poster.DocumentFragment;
 
 public class HomeActivity extends AppCompatActivity {
 

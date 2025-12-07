@@ -23,10 +23,15 @@
         </activity>
         <activity android:name=".HomeActivity"  >
         </activity>
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".ChatDetailActivity" />
-        <activity android:name=".NotificationActivity" />
-        <activity android:name=".ThuVienActivity" />
+        <activity android:name=".Chat.ChatActivity" />
+        <activity android:name=".Chat.ChatDetailActivity" />
+        <activity android:name=".Home.NotificationActivity" />
+        <activity android:name=".library.ThuVienActivity" />
+        <activity android:name=".Home.PdfDetailActivity"/>
+        <activity android:name=".poster.UploadDocumentActivity"/>
+        <activity android:name=".poster.DocumentDetailActivity" />
+
+
 
     </application>
 

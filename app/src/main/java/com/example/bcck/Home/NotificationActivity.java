@@ -1,4 +1,4 @@
-package com.example.bcck;
+package com.example.bcck.Home;
 
 // File: NotificationActivity.java
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.bcck.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +39,7 @@ public class NotificationActivity extends AppCompatActivity implements Notificat
         adapter = new NotificationAdapter(this, notificationList);
         adapter.setOnNotificationClickListener(this); // Thiết lập Listener
         recyclerView.setAdapter(adapter);
+
         updateUnreadCountText();
         setupEventListeners();
     }
