@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="+ Tạo bộ sưu tập mới"
+        android:text="Tạo bộ sưu tập mới"
         android:textColor="@android:color/white"
         android:textAllCaps="false"
         android:textSize="16sp"
