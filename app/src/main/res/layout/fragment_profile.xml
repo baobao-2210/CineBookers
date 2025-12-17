@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Header -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/headerLayout"
             android:layout_width="0dp"
@@ -23,7 +22,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <!-- Back Button -->
             <ImageView
                 android:id="@+id/btnBack"
                 android:layout_width="40dp"
@@ -36,7 +34,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
-            <!-- Title -->
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="0dp"
@@ -51,8 +48,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
-            <!-- Settings Button -->
-
             <ImageView
                 android:id="@+id/btnSettings"
                 android:layout_width="31dp"
@@ -66,11 +61,8 @@
                 app:layout_constraintVertical_bias="0.0"
                 app:tint="@android:color/white" />
 
-         
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- Profile Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/profileCard"
             android:layout_width="0dp"
@@ -90,7 +82,6 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp">
 
-                <!-- Avatar with Camera Icon -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/avatarCard"
                     android:layout_width="100dp"
@@ -106,7 +97,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <!-- Avatar Icon -->
                         <ImageView
                             android:id="@+id/imgAvatar"
                             android:layout_width="60dp"
@@ -118,7 +108,6 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:tint="@android:color/white" />
 
-                        <!-- Camera Icon -->
                         <ImageView
                             android:id="@+id/btnEditAvatar"
                             android:layout_width="32dp"
@@ -130,7 +119,16 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:tint="#5B5FC7" />
 
-                        <!-- Username Badge -->
+                        <ProgressBar
+                            android:id="@+id/progressBarAvatar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:indeterminateTint="@android:color/white"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -149,7 +147,6 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- User Info -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -159,14 +156,13 @@
                     app:layout_constraintStart_toEndOf="@id/avatarCard"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <!-- Họ và tên -->
                     <TextView
                         android:id="@+id/tvName"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         android:padding="8dp"
-                        android:text="Họ và tên : Nguyễn Tấn Bảo"
+                        android:text="Họ và tên : ..."
                         android:textColor="#000080"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -174,7 +170,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <!-- Lớp -->
                     <TextView
                         android:id="@+id/tvClass"
                         android:layout_width="0dp"
@@ -182,7 +177,7 @@
                         android:layout_marginTop="4dp"
                         android:background="@android:color/white"
                         android:padding="8dp"
-                        android:text="Lớp :      "
+                        android:text="Lớp : ..."
                         android:textColor="#000080"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -190,7 +185,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvName" />
 
-                    <!-- Khoa -->
                     <TextView
                         android:id="@+id/tvDepartment"
                         android:layout_width="0dp"
@@ -198,7 +192,7 @@
                         android:layout_marginTop="4dp"
                         android:background="@android:color/white"
                         android:padding="8dp"
-                        android:text="Khoa : "
+                        android:text="Khoa : ..."
                         android:textColor="#000080"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -206,7 +200,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvClass" />
 
-                    <!-- Khóa -->
                     <TextView
                         android:id="@+id/tvYear"
                         android:layout_width="0dp"
@@ -214,7 +207,7 @@
                         android:layout_marginTop="4dp"
                         android:background="@android:color/white"
                         android:padding="8dp"
-                        android:text="Khóa : 2023"
+                        android:text="Khóa : ..."
                         android:textColor="#000080"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -222,7 +215,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvDepartment" />
 
-                    <!-- Email -->
                     <TextView
                         android:id="@+id/tvEmail"
                         android:layout_width="0dp"
@@ -230,7 +222,7 @@
                         android:layout_marginTop="4dp"
                         android:background="@android:color/white"
                         android:padding="8dp"
-                        android:text="Email : XXXXX@gmail.com"
+                        android:text="Email : ..."
                         android:textColor="#000080"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -243,7 +235,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Menu Card 1 -->
         <androidx.cardview.widget.CardView
             android:id="@+id/menuCard1"
             android:layout_width="0dp"
@@ -264,7 +255,6 @@
                 android:orientation="vertical"
                 android:padding="8dp">
 
-                <!-- Tài liệu -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btnDocuments"
                     android:layout_width="match_parent"
@@ -299,7 +289,6 @@
                     android:layout_height="1dp"
                     android:background="#E0E0E0" />
 
-                <!-- Bài đăng -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btnPosts"
                     android:layout_width="match_parent"
@@ -334,7 +323,6 @@
                     android:layout_height="1dp"
                     android:background="#E0E0E0" />
 
-                <!-- Thư viện của tôi -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btnLibrary"
                     android:layout_width="match_parent"
@@ -369,7 +357,6 @@
                     android:layout_height="1dp"
                     android:background="#E0E0E0" />
 
-                <!-- Lịch sử tải xuống -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btnDownloadHistory"
                     android:layout_width="match_parent"
@@ -404,7 +391,6 @@
                     android:layout_height="1dp"
                     android:background="#E0E0E0" />
 
-                <!-- Tài liệu của tôi -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btnMyDocuments"
                     android:layout_width="match_parent"
@@ -437,7 +423,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Menu Card 2 -->
         <androidx.cardview.widget.CardView
             android:id="@+id/menuCard2"
             android:layout_width="0dp"
@@ -458,7 +443,6 @@
                 android:orientation="vertical"
                 android:padding="8dp">
 
-                <!-- Cập nhật thông tin tài khoản -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btnUpdateInfo"
                     android:layout_width="match_parent"
@@ -493,7 +477,6 @@
                     android:layout_height="1dp"
                     android:background="#E0E0E0" />
 
-                <!-- Bảo mật và quyền riêng tư -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btnSecurity"
                     android:layout_width="match_parent"
@@ -526,7 +509,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- University Image -->
         <ImageView
             android:id="@+id/imgUniversity"
             android:layout_width="0dp"

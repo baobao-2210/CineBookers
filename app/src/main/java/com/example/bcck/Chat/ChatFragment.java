@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bcck.HomeActivity;
 import com.example.bcck.R;
 
 import java.util.ArrayList;
@@ -88,8 +89,12 @@ public class ChatFragment extends Fragment {
 
     private void setupButtons() {
         btnBack.setOnClickListener(v -> {
+            // Thay 'MainActivity.class' bằng tên file Activity trang chủ của bạn
+            Intent intent = new Intent(getActivity(), HomeActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
             if (getActivity() != null) {
-                getActivity().onBackPressed();
+                getActivity().finish();
             }
         });
 
