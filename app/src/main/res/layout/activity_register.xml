@@ -252,17 +252,6 @@
                         android:src="@drawable/ic_facebook" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tvGoToRegister"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Chưa có tài khoản? Đăng ký"
-                    android:textColor="#536DFE"
-                    android:textSize="13sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="275dp" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 

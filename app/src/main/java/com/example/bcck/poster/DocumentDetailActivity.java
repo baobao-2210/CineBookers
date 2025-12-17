@@ -1,7 +1,13 @@
 package com.example.bcck.poster;
 
+import android.app.DownloadManager;
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +18,8 @@ import com.example.bcck.Chat.ChatActivity;
 import com.example.bcck.Chat.ChatDetailActivity;
 import com.example.bcck.Chat.ChatFragment;
 import com.example.bcck.R;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -100,12 +108,49 @@ public class DocumentDetailActivity extends AppCompatActivity {
         }
     }
 
-    // CÁC HÀM XỬ LÝ THAO TÁC (Giữ nguyên)
 
     private void handleDownload(Document document) {
-        Toast.makeText(this, "Đang tải xuống tài liệu: " + document.getTitle(), Toast.LENGTH_LONG).show();
-        // TODO: Viết code kiểm tra document.getFileUrl() và sử dụng DownloadManager
+
+        if (document.getFileUrl() == null || document.getFileUrl().isEmpty()) {
+            Toast.makeText(this, "File không tồn tại!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // ✅ FIX CLOUDINARY LINK
+        String downloadUrl = document.getFileUrl()
+                .replace("/raw/upload/", "/raw/upload/fl_attachment/");
+
+        Uri uri = Uri.parse(downloadUrl);
+
+        String fileName = document.getTitle();
+        if (!fileName.toLowerCase().endsWith(".pdf")) {
+            fileName += ".pdf";
+        }
+
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setTitle(fileName);
+        request.setDescription("Đang tải tài liệu...");
+        request.setNotificationVisibility(
+                DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED
+        );
+
+        request.setMimeType("application/pdf");
+        request.allowScanningByMediaScanner();
+
+        request.setDestinationInExternalPublicDir(
+                Environment.DIRECTORY_DOWNLOADS,
+                fileName
+        );
+
+        DownloadManager manager =
+                (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+
+        if (manager != null) {
+            manager.enqueue(request);
+            Toast.makeText(this, "Đang tải xuống...", Toast.LENGTH_SHORT).show();
+        }
     }
+
 
     private void handleShare(Document document) {
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
@@ -117,9 +162,28 @@ public class DocumentDetailActivity extends AppCompatActivity {
     }
 
     private void handlePreview(Document document) {
-        Toast.makeText(this, "Mở trình xem trước cho: " + document.getTitle(), Toast.LENGTH_SHORT).show();
-        // TODO: Khởi chạy Activity/Fragment chứa PDF/PPT Viewer
+
+        if (document.getFileUrl() == null || document.getFileUrl().isEmpty()) {
+            Toast.makeText(this, "Không có file!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Google PDF Viewer
+        String googleViewerUrl =
+                "https://drive.google.com/viewerng/viewer?embedded=true&url="
+                        + document.getFileUrl();
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(googleViewerUrl));
+
+        try {
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(this, "Không thể xem trước file PDF", Toast.LENGTH_SHORT).show();
+        }
     }
+
+
 
     private void handleMessage(Document document) {
         // Lấy thông tin cần thiết từ Document
@@ -145,4 +209,5 @@ public class DocumentDetailActivity extends AppCompatActivity {
             Toast.makeText(this, "Không thể xác định người nhận để chat.", Toast.LENGTH_SHORT).show();
         }
     }
+
 }

@@ -67,7 +67,6 @@ public class HomeActivity extends AppCompatActivity {
         navChatText = findViewById(R.id.navChatText);
         navProfileText = findViewById(R.id.navProfileText);
     }
-
     private void setupBottomNavigation() {
         // Tab Trang Chủ
         navDocs.setOnClickListener(v -> {

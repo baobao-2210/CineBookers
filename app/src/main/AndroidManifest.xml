@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -27,11 +27,8 @@
         <activity android:name=".Chat.ChatDetailActivity" />
         <activity android:name=".Home.NotificationActivity" />
         <activity android:name=".library.ThuVienActivity" />
-        <activity android:name=".Home.PdfDetailActivity"/>
         <activity android:name=".poster.UploadDocumentActivity"/>
         <activity android:name=".poster.DocumentDetailActivity" />
-
-
 
     </application>
 
